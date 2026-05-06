@@ -27,10 +27,11 @@ header {
     z-index: 999;
 }
 
-/* SCREEN 2 */
+/* SCREEN SHMU */
 
 #screen-2 {
- background: green;
+ background: #9B66B0;
+ color: white;
 }
 
 /* SCREEN 3 */

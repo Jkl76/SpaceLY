@@ -184,3 +184,22 @@ nav {
     color: white;
     font-size: 0.8rem;
 }
+
+/* Checkout-Page */
+
+#checkout-page {
+    background: #9B66B0;
+    padding: 20px;
+    color: white;
+}
+
+.checkout-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.checkout-logo {
+    width: 40px;
+}

@@ -27,22 +27,59 @@ header {
     z-index: 999;
 }
 
-/* SCREEN SHMU */
+/* SCREEN 2 */
 
 #screen-2 {
-<<<<<<< HEAD
- background: #9B66B0;
-=======
+    background: red;
+}
+
+/* SCREEN SHMU */
+
+#shmu {
 background: #9B66B0;
->>>>>>> fa1376e525acbf4b0198bbea6f8266ee7102c710
+padding: 20px;
  color: white;
 }
 
-/* SCREEN 3 */
-
-#screen-3 {
-    background: red;
+.p-title-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
+.bck {
+    width: 35px;
+    height: 35px;
+}
+.studio-img {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.bookn {
+    margin-top: 15px;
+}
+
+.bookn button {
+    background: #7E3D98;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.info-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+hr {
+    border-color: #732990;
+}
+
+
+
 
 /* FOOTER NAVIGATION */
 

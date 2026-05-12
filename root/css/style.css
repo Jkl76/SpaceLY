@@ -16,16 +16,25 @@ body {
     margin: 0 auto;
 }
 
-header {
+/* header */
+.top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 15px 20px;
     position: sticky;
-    top: 0;
-    background: grey;
-    z-index: 999;
+    
+    background: #793693;
 }
+.logo {
+    width: 50px;
+}
+.top-bar h1 {
+    margin-right: 20px;
+    margin-left: auto;
+    color: black;
+}
+
 
 /* SCREEN 2 */
 
@@ -227,26 +236,22 @@ ul {
 
 /* FOOTER NAVIGATION */
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    height: 60px;
-    padding: 0 5rem;
-    background-color: grey;
-    width: 100%;
-    max-width: 700px;
-}
 
-.nav-item {
+
+.navb {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    background:  #302335;
     align-items: center;
     color: white;
-    font-size: 0.8rem;
+    padding: 15px 0;
+    bottom: 0;
+    width: 100%;   
+}
+
+.navb a {
+text-decoration: none;
+color: white;
 }
 
 /* Checkout-Page */

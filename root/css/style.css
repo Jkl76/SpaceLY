@@ -101,6 +101,64 @@ ul {
     color: white;
 }
 
+/* image slideshow  */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.slides {
+    position: relative;
+}
+.carousel-img.active {
+    display: block;
+}
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    padding: 10px;
+    border: none;
+
+    font-size: 20px;
+    z-index: 100;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
 
 /*submit button*/
 .black-btn {
@@ -402,35 +460,11 @@ ul {
 
 
     
-    /* FOOTER NAVIGATION */
+
     
     
     
-    .navb {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        color: white;
-        background:  #302335;
-
-        position: fixed;
-        bottom: 0;
-
-        width: 100%;
-        max-width: 700px;
-
-        
-        padding: 12px 0;
-       
-        z-index: 1000;
-    }
     
-    .navb a {
-    text-decoration: none;
-    color: white;
-    }
-
 /*Order page SCEEN 5*/
 
 /* SCREEN 5 CHECKOUT */
@@ -498,3 +532,58 @@ ul {
     border: 1px solid #732990;
     margin: 25px 0;
 }
+
+
+#Confirmation {
+    background: #9B66B0;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navigation */
+
+.navb {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        color: white;
+        background:  #302335;
+
+        position: fixed;
+        bottom: 0;
+
+        width: 100%;
+        max-width: 700px;
+
+        
+        padding: 12px 0;
+       
+        z-index: 1000;
+    }
+    
+    .navb a {
+    text-decoration: none;
+    color: white;
+    }

@@ -23,7 +23,19 @@
 
                 <!--image slideshow -->
                 
-                <hr>
+       <section class="carousel">
+        <button class="prev">&#10094;</button>
+        <div class="slides">
+            <img src="img/Studio 1.jpg" alt="studio" class="carousel-img active">
+            <img src="img/Studio 2.jpg" alt="studio" class="carousel-img">
+            <img src="img/Studio 3.jpg" alt="studio" class="carousel-img">
+            <img src="img/Studio 4.jpeg" alt="studio" class="carousel-img">
+            <img src="img/Studio 5.jpg" alt="studio" class="carousel-img">
+        </div>
+        <div class="carousel-text"><h2>Book your space now</h2></div>
+
+        <button class="next">&#10095;</button>
+       </section>
 
                 <!-- booking form -->
                  <div class="bookn">
@@ -56,6 +68,7 @@
 
                 
             </section>
+
 
              <!-- SEARCH PAGE -->
             <section id="search-page">
@@ -518,7 +531,7 @@
 
     <h2 class="checkout-title">Order Summary</h2>
 
-    <img src="img/Shmu pic.jpg" alt="studio" class="checkout-image">
+    <img src="img/Out S.jpg" alt="studio" class="checkout-image">
 
     <p class="time-text">10:00 - 11:30</p>
 
@@ -529,11 +542,10 @@
 </section>
 
 
-             <!-- SCREEN 6 -->
-            <section id="screen-6">
-                <h3>Screen 6</h3>
-                <p>This is the Third screen's content</p>
-                <img src="https://picsum.photos/200/300" alt="A Random Image">
+             <!-- COnfirmation -->
+            <section id="Confirmation"> 
+              <h1>Order Confirmed!!!</h1>               
+                <img src="img/Out S.jpg" alt="studio" class="checkout-image">
             </section>
 
 
@@ -555,5 +567,49 @@
         <p>Back</p>
        </a>
     </nav>
+
+<!-- Carousel Scripts -->
+<script>
+const slides = document.querySelectorAll('.carousel-img');
+
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+let currentIndex = 0;
+
+function showSlide(index) {
+
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    slides[index].classList.add('active');
+}
+
+nextBtn.addEventListener('click', () => {
+
+    currentIndex++;
+    if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+    showSlide(currentIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+  showSlide(currentIndex);
+});
+
+</script>
+
+
+
+
+
+
+
+
 </body>
 </html>

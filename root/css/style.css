@@ -589,3 +589,17 @@ ul {
     text-decoration: none;
     color: white;
     }
+
+#captain-checkout,
+#musical-checkout {
+    background: #9B66B0;
+    padding: 20px;
+    color: white;
+}
+
+#captain-checkout hr,
+#musical-checkout hr {
+    border: 1px solid #732990;
+    margin: 25px 0;
+}
+

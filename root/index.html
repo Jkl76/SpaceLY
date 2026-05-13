@@ -32,7 +32,6 @@
                     
 
                     <!-- Location -->
-                    <form action="submit" method="post"></form>
                      <h3>Location</h3>
                      <input type="Text" placeholder="Enter Location"
                      style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
@@ -48,8 +47,9 @@
                      style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
                      
                      <!--submit-->
+                     <form action="submit" method="post">
                         <button class="black-btn" type="submit">Search studios near me</button>
-                    </form>
+                      </form>
 
                  </div>
                 
@@ -277,12 +277,134 @@
 
                 <style>
 
-  
- 
-  
- 
-</style>
+  body {
 
+    font-family: Arial, sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    background: #f0f2f5;
+
+  }
+ 
+  .calendar {
+
+    width: 320px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+
+    padding: 15px;
+
+  }
+ 
+  .header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+  }
+ 
+  .header button {
+
+    background: none;
+
+    border: none;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+  }
+ 
+  .monthYear {
+
+    font-weight: bold;
+
+  }
+ 
+  .days, .dates {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    text-align: center;
+
+  }
+ 
+  .days div {
+
+    font-weight: bold;
+
+    padding: 5px 0;
+
+    color: #555;
+
+  }
+ 
+  .dates div {
+
+    padding: 10px;
+
+    margin: 2px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+  }
+ 
+  .dates div:hover {
+
+    background: #e0e7ff;
+
+  }
+ 
+  .start, .end {
+
+    background: #4f46e5;
+
+    color: white;
+
+  }
+ 
+  .in-range {
+
+    background: #c7d2fe;
+
+  }
+ 
+  .today {
+
+    border: 1px solid #4f46e5;
+
+  }
+ 
+  .result {
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+  }
+</style>
+</head>
+<body>
  
 <div class="calendar">
 <div class="header">
@@ -463,52 +585,49 @@
 </script>
  
 
-
- 
-
            
 
 
 
 
                
-            </section>
-
-
-
-
+  </section>
 
 
             
-             <!-- SCREEN 5 -->
-            <section id="screen-5">
+<!-- SCREEN 5 -->
+<section id="screen-5">
                 
-            <div class="checkout-top">
-                <img src="img/" alt="logo" class="studio-img">
-                <h1>SpaceLY</h1>
-            </div>
+  <div class="checkout-top">
+    <img src="img/logo.png" alt="logo" class="studio-img">
+      <h1>SpaceLY</h1>
+    </div>
 
-            <h2>Customer Details</h2>
+      <h2>Customer Details</h2>
 
-            <div class="checkout-form">
-                <input type="text" placeholder="Forename">
-                <input type="text" placeholder="Surname">
+    <div class="checkout-form">
+      <input type="text" placeholder="Forename">
+      <input type="text" placeholder="Surname">
 
-                <input type="email" placeholder="Email Address">
-                <input type="text" placeholder="Phone Number">
+      <input type="email" placeholder="Email Address">
+      <input type="text" placeholder="Phone Number">
 
-                <input type="text" placeholder="City" class="full-input">
-            </div>
+      <input type="text" placeholder="City" class="full-input">
+    </div>
 
+    <hr>
 
+      <h2>Bank Account Details</h2>
 
+        <div class="checkout-form">
+          <input type="text" placeholder="Account Number">
+          <input type="text" placeholder="Expiry date">
 
+          <input type="text" placeholder="Name on card">
+          <input type="text" placeholder="Security code">
+        </div>
 
-
-
-
-
-
+    <hr>
 
 
 

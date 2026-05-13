@@ -44,7 +44,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    position: sticky;
+    position: fixed;
+    left: 0;
+    right: 0;
     
     background: #793693;
 }
@@ -376,22 +378,6 @@ ul {
 
 
 
-.navb {
-    display: flex;
-    justify-content: space-around;
-    background:  #302335;
-    align-items: center;
-    color: white;
-    padding: 15px 0;
-    bottom: 0;
-    width: 100%;   
-}
-
-.navb a {
-text-decoration: none;
-color: white;
-}
-
 /*captain*/
 #Captain {
 background: #9B66B0;
@@ -533,6 +519,7 @@ ul {
     
     
     .navb {
+        position: fixed;
         display: flex;
         justify-content: space-around;
         background:  #302335;

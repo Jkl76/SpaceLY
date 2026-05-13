@@ -156,14 +156,26 @@ ul {
     font-size: 14px;
 }
 
-/* SCREEN SHMU */
-
-#shmu {
-background: #9B66B0;
-padding: 20px;
- color: white;
+/* product map */
+.map-link a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px;
 }
 
+/* Product info */
+.info-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.info-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* Product nav */
 .p-title-bar {
     display: flex;
     align-items: center;
@@ -190,13 +202,13 @@ padding: 20px;
     border-radius: 20px;
 }
 
-.info-links {
-    display: flex;
-    justify-content: space-between;
-    /* margin-top: 25px; */
-    font-size: 14px;
-}
+/* SCREEN SHMU */
 
+#shmu {
+background: #9B66B0;
+padding: 20px;
+ color: white;
+}
 hr {
     border-color: #732990;
     margin: 5px 0;
@@ -225,39 +237,6 @@ background: #9B66B0;
 padding: 20px;
  color: white;
 }
-
-.p-title-bar {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.bck {
-    width: 35px;
-    height: 35px;
-}
-.studio-img {
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-.bookn {
-    margin-top: 15px;
-}
-
-.bookn button {
-    background: #7E3D98;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.info-links {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
 hr {
     border-color: #732990;
     margin: 5px 0;
@@ -279,9 +258,6 @@ ul {
     padding-left: 20px;
 }
 
-.address {
-    color: white;
-}
 
 
 /* Musical Vision */
@@ -291,38 +267,6 @@ padding: 20px;
  color: white;
 }
 
-.p-title-bar {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.bck {
-    width: 35px;
-    height: 35px;
-}
-.studio-img {
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-.bookn {
-    margin-top: 15px;
-}
-
-.bookn button {
-    background: #7E3D98;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.info-links {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
 hr {
     border-color: #732990;
     margin: 5px 0;
@@ -344,9 +288,6 @@ ul {
     padding-left: 20px;
 }
 
-.address {
-    color: white;
-}
 
 /* Calender */
 .calendar {
@@ -498,35 +439,6 @@ ul {
     background: #9B66B0;
     padding: 20px;
     color: white;
-}
-
-.checkout-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.checkout-logo {
-    width: 45px;
-}
-
-.checkout-header h1 {
-    font-size: 32px;
-    font-weight: bold;
-    color: black;
-}
-
-.menu-icon {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.menu-icon span {
-    width: 28px;
-    height: 3px;
-    background: black;
 }
 
 .checkout-title {

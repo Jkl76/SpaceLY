@@ -536,4 +536,97 @@ ul {
     }
 /*Order page SCEEN 5*/
 
+/* SCREEN 5 CHECKOUT */
 
+#screen-5 {
+    background: #9B66B0;
+    padding: 20px;
+    color: white;
+}
+
+.checkout-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.checkout-logo {
+    width: 45px;
+}
+
+.checkout-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 28px;
+    height: 3px;
+    background: black;
+}
+
+.checkout-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.checkout-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkout-form input {
+    width: 47%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    text-align: center;
+}
+
+.checkout-form input::placeholder {
+    color: white;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.checkout-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.time-text {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #7E3D98;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#screen-5 hr {
+    border: 1px solid #732990;
+    margin: 25px 0;
+}

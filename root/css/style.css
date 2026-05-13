@@ -35,7 +35,7 @@ header {
 
 /* SCREEN SHMU */
 
-#shmu {
+#shmu #homepage {
 background: #9B66B0;
 padding: 20px;
  color: white;
@@ -95,69 +95,8 @@ ul {
     padding-left: 20px;
 }
 
-/* Captain Toms */
-#Captain {
-background: #9B66B0;
-padding: 20px;
- color: white;
-}
 
-.p-title-bar {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.bck {
-    width: 35px;
-    height: 35px;
-}
-.studio-img {
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-.bookn {
-    margin-top: 15px;
-}
 
-.bookn button {
-    background: #7E3D98;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.info-links {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-hr {
-    border-color: #732990;
-    margin: 5px 0;
-}
-
-h3{
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-ul {
-    margin-top: 15px;
-    margin-bottom: 25px;
-    padding-left: 20px;
-}
-
-.address {
-    color: white;
-}
 
 
 
@@ -185,21 +124,3 @@ nav {
     font-size: 0.8rem;
 }
 
-/* Checkout-Page */
-
-#checkout-page {
-    background: #9B66B0;
-    padding: 20px;
-    color: white;
-}
-
-.checkout-top {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.checkout-logo {
-    width: 40px;
-}

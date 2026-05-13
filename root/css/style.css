@@ -1,4 +1,4 @@
-* {
+`* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -193,27 +193,118 @@ ul {
     color: white;
 }
 
+/* Calender */
+.calendar {
 
+    width: 320px;
 
-/* FOOTER NAVIGATION */
+    background: white;
 
+    border-radius: 12px;
 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 
-.navb {
+    padding: 15px;
+
+  }
+  .header {
+
     display: flex;
-    justify-content: space-around;
-    background:  #302335;
-    align-items: center;
-    color: white;
-    padding: 15px 0;
-    bottom: 0;
-    width: 100%;   
-}
 
-.navb a {
-text-decoration: none;
-color: white;
-}
+    justify-content: space-between;
+
+    align-items: center;
+
+  }
+ 
+  .header button {
+
+    background: none;
+
+    border: none;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+  }
+ 
+  .monthYear {
+
+    font-weight: bold;
+
+  }
+ 
+  .days, .dates {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    text-align: center;
+
+  }
+ 
+  .days div {
+
+    font-weight: bold;
+
+    padding: 5px 0;
+
+    color: #555;
+
+  }
+ 
+  .dates div {
+
+    padding: 10px;
+
+    margin: 2px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+  }
+ 
+  .dates div:hover {
+
+    background: #e0e7ff;
+
+  }
+ 
+  .start, .end {
+
+    background: #4f46e5;
+
+    color: white;
+
+  }
+ 
+  .in-range {
+
+    background: #c7d2fe;
+
+  }
+ 
+  .today {
+
+    border: 1px solid #4f46e5;
+
+  }
+ 
+  .result {
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+  }
+
+
+
 
 /*homepage section*/
 #homepage {
@@ -370,22 +461,6 @@ ul {
 /* FOOTER NAVIGATION */
 
 
-
-.navb {
-    display: flex;
-    justify-content: space-around;
-    background:  #302335;
-    align-items: center;
-    color: white;
-    padding: 15px 0;
-    bottom: 0;
-    width: 100%;   
-}
-
-.navb a {
-text-decoration: none;
-color: white;
-}
 
 /*booking*/
 #screen-5 {

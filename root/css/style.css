@@ -279,5 +279,91 @@ text-decoration: none;
 color: white;
 }
 
+/*captain*/
+#Captain {
+background: #9B66B0;
+padding: 20px;
+ color: white;
+}
+
+.p-title-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.bck {
+    width: 35px;
+    height: 35px;
+}
+.studio-img {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.bookn {
+    margin-top: 15px;
+}
+
+.bookn button {
+    background: #7E3D98;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.info-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+hr {
+    border-color: #732990;
+    margin: 5px 0;
+}
+
+h3{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.address {
+    color: white;
+}
+
+
+
+/* FOOTER NAVIGATION */
+
+
+
+.navb {
+    display: flex;
+    justify-content: space-around;
+    background:  #302335;
+    align-items: center;
+    color: white;
+    padding: 15px 0;
+    bottom: 0;
+    width: 100%;   
+}
+
+.navb a {
+text-decoration: none;
+color: white;
+}
+
 
 

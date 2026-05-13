@@ -259,7 +259,9 @@ ul {
     padding: 10px 20px;
     border-radius: 20px;
 }
-
+button {
+    cursor: pointer;
+}
 /* SCREEN SHMU */
 
 #shmu {

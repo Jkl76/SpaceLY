@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpaceLY</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="JS/script.js"></script>
 </head>
 <body>
       <!-- header -->
@@ -16,7 +17,7 @@
 
         <main>
             <!-- SCREEN 1 -->
-            <section id="homepage">
+            <section id="homepage" class="active-screen">
                 <div class="p-title-bar">
                 <h1>Spacely</h1>
                 </div>
@@ -72,7 +73,7 @@
 
 
              <!-- SEARCH PAGE -->
-            <section id="search-page">
+            <section id="search-page" class="screen">
                 <div class="studio-box">
                     <a href="#shmu">
                     <img src="img/Shmu pic.jpg" alt="studio" class="studio-img">
@@ -111,7 +112,7 @@
             </section>
 
            <!-- SCREEN SHMU-->
-            <section id="shmu">
+            <section id="shmu" class="screen">
                 <div class="p-title-bar">
                 <a href="#search-page"> <img src="img/93634.png" class="bck" alt="" ></a>   
                 <h1>SHMU Radio</h1>
@@ -185,7 +186,7 @@
 
             <!-- screen Captain Toms -->
 
-            <section id="Captain">
+            <section id="Captain" class="screen">
                 <div class="p-title-bar">
                 <a href="#search-page"> <img src="img/93634.png" class="bck" alt="" ></a>   
                 <h1>Captain Toms</h1>
@@ -252,47 +253,10 @@
                 </div>
             </section>
 
-<!-- CAPTAIN TOMS CHECKOUT -->
-<section id="captain-checkout">
-
-    <h2 class="checkout-title">Customer Details</h2>
-
-    <div class="checkout-form">
-        <input type="text" placeholder="Forename">
-        <input type="text" placeholder="Surname">
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Phone Number">
-        <input type="text" placeholder="City" class="full-width">
-    </div>
-
-    <hr>
-
-    <h2 class="checkout-title">Bank Account Details</h2>
-
-    <div class="checkout-form">
-        <input type="text" placeholder="Account Number">
-        <input type="text" placeholder="Expiry date">
-        <input type="text" placeholder="Name on card">
-        <input type="text" placeholder="Security code">
-    </div>
-
-    <hr>
-
-    <h2 class="checkout-title">Order Summary</h2>
-
-    <img src="img/captaintoms.jpg" alt="Captain Toms" class="checkout-image">
-
-    <p class="time-text">10:00 - 11:30</p>
-
-    <button class="checkout-btn">Proceed to checkout</button>
-
-</section>
-
-            
 
             <!-- Musical Vision -->
 
-            <section id="Musical">
+            <section id="Musical" class="screen">
                 <div class="p-title-bar">
                 <a href="#search-page"> <img src="img/93634.png" class="bck" alt="" ></a>   
                 <h1>Musical Vision</h1>
@@ -355,47 +319,9 @@
                 </div>
             </section>
 
-
-            <!-- MUSICAL VISION CHECKOUT -->
-<section id="musical-checkout">
-
-    <h2 class="checkout-title">Customer Details</h2>
-
-    <div class="checkout-form">
-        <input type="text" placeholder="Forename">
-        <input type="text" placeholder="Surname">
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Phone Number">
-        <input type="text" placeholder="City" class="full-width">
-    </div>
-
-    <hr>
-
-    <h2 class="checkout-title">Bank Account Details</h2>
-
-    <div class="checkout-form">
-        <input type="text" placeholder="Account Number">
-        <input type="text" placeholder="Expiry date">
-        <input type="text" placeholder="Name on card">
-        <input type="text" placeholder="Security code">
-    </div>
-
-    <hr>
-
-    <h2 class="checkout-title">Order Summary</h2>
-
-    <img src="img/MV.jpg" alt="Musical Vision" class="checkout-image">
-
-    <p class="time-text">10:00 - 11:30</p>
-
-    <button class="checkout-btn">Proceed to checkout</button>
-
-</section>
-      
-
           
              <!-- Joe's Page -->
-            <section id="screen-4">
+            <section id="screen-4" class="screen">
           
  
 <div class="calendar">
@@ -578,7 +504,7 @@
             </section>
    
              <!-- SCREEN 5 -->
-            <section id="screen-5">
+            <section id="screen-5" class="screen">
 
 
     <h2 class="checkout-title">Customer Details</h2>
@@ -619,13 +545,84 @@
 
 </section>
 
+<!-- CAPTAIN TOMS CHECKOUT -->
+<section id="captain-checkout" class="screen">
+
+    <h2 class="checkout-title">Customer Details</h2>
+
+    <div class="checkout-form">
+        <input type="text" placeholder="Forename">
+        <input type="text" placeholder="Surname">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number">
+        <input type="text" placeholder="City" class="full-width">
+    </div>
+
+    <hr>
+
+    <h2 class="checkout-title">Bank Account Details</h2>
+
+    <div class="checkout-form">
+        <input type="text" placeholder="Account Number">
+        <input type="text" placeholder="Expiry date">
+        <input type="text" placeholder="Name on card">
+        <input type="text" placeholder="Security code">
+    </div>
+
+    <hr>
+
+    <h2 class="checkout-title">Order Summary</h2>
+
+    <img src="img/captaintoms.jpg" alt="Captain Toms" class="checkout-image">
+
+    <p class="time-text">10:00 - 11:30</p>
+
+    <button class="checkout-btn">Proceed to checkout</button>
+
+</section>
+
+
+<!-- MUSICAL VISION CHECKOUT -->
+        <section id="musical-checkout" class="screen">
+
+    <h2 class="checkout-title">Customer Details</h2>
+
+    <div class="checkout-form">
+        <input type="text" placeholder="Forename">
+        <input type="text" placeholder="Surname">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number">
+        <input type="text" placeholder="City" class="full-width">
+    </div>
+
+    <hr>
+
+    <h2 class="checkout-title">Bank Account Details</h2>
+
+    <div class="checkout-form">
+        <input type="text" placeholder="Account Number">
+        <input type="text" placeholder="Expiry date">
+        <input type="text" placeholder="Name on card">
+        <input type="text" placeholder="Security code">
+    </div>
+
+    <hr>
+
+    <h2 class="checkout-title">Order Summary</h2>
+
+    <img src="img/MV.jpg" alt="Musical Vision" class="checkout-image">
+
+    <p class="time-text">10:00 - 11:30</p>
+
+    <button class="checkout-btn">Proceed to checkout</button>
+
+</section>
 
              <!-- COnfirmation -->
-            <section id="Confirmation"> 
+            <section id="Confirmation" class="screen"> 
               <h1>Order Confirmed!!!</h1>               
                 <img src="img/Out S.jpg" alt="studio" class="checkout-image">
             </section>
-
 
         </main>
     </div>
@@ -681,6 +678,8 @@ prevBtn.addEventListener('click', () => {
 });
 
 </script>
+
+
 
 
 

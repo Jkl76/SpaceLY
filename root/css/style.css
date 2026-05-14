@@ -1,8 +1,15 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
+}
+
+.screen {
+    display: none;
+}
+.active-screen {
+    display: block;
 }
 
 body {
@@ -459,14 +466,7 @@ ul {
 
   }
 
-
-
-    
-
-    
-    
-    
-    
+  
 /*Order page SCEEN 5*/
 
 /* SCREEN 5 CHECKOUT */
@@ -535,6 +535,18 @@ ul {
     margin: 25px 0;
 }
 
+#captain-checkout,
+#musical-checkout {
+    background: #9B66B0;
+    padding: 20px;
+    color: white;
+}
+
+#captain-checkout hr,
+#musical-checkout hr {
+    border: 1px solid #732990;
+    margin: 25px 0;
+}
 
 #Confirmation {
     background: #9B66B0;
@@ -542,19 +554,6 @@ ul {
     color: white;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -590,16 +589,5 @@ ul {
     color: white;
     }
 
-#captain-checkout,
-#musical-checkout {
-    background: #9B66B0;
-    padding: 20px;
-    color: white;
-}
 
-#captain-checkout hr,
-#musical-checkout hr {
-    border: 1px solid #732990;
-    margin: 25px 0;
-}
 

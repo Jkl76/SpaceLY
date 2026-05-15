@@ -16,7 +16,7 @@
         </header>
 
         <main>
-            <!-- SCREEN 1 -->
+            <!-- SCREEN Homepage -->
             <section id="homepage" class="active-screen">
                 <div class="p-title-bar">
                 <h1>Spacely</h1>
@@ -74,8 +74,7 @@
 
              <!-- SEARCH PAGE -->
             <section id="search-page" class="screen">
-                <div class="studio-box">
-                    <a href="#shmu">
+                <div class="studio-box" onclick="showScreen('shmu')">
                     <img src="img/Shmu pic.jpg" alt="studio" class="studio-img">
                     
                     <div class="boxT">
@@ -86,7 +85,7 @@
                     </a>
                 </div>
 
-                <div class="studio-box">
+                <div class="studio-box" onclick="showScreen('Captain')">
                     <a href="#Captain">
                     <img src="img/captaintoms.jpg" alt="studio" class="studio-img">
                     
@@ -98,7 +97,7 @@
                     </a>
                 </div>
 
-                <div class="studio-box">
+                <div class="studio-box" onclick="showScreen('Musical')">
                     <a href="#Musical">
                     <img src="img/MV.jpg" alt="studio" class="studio-img">
                     
@@ -121,7 +120,7 @@
                 <img src="img/Shmu pic.jpg" class="studio-img" alt="">
 
                 <div class="bookn">
-                  <a href="#screen-4"><button>Book now</button></a>  
+              <button onclick="showScreen('booking')">Book now</button> 
                   
                     <p>From £40/hr</p>
                 </div>
@@ -195,7 +194,7 @@
                 <img src="img/captaintoms.jpg" class="studio-img" alt="">
 
                 <div class="bookn">
-                    <a href="#screen-4"><button>Book now</button></a>
+                    <button onclick="showScreen('booking')">Book now</button>
                     <p>From £30/hr</p>
                 </div>
 
@@ -265,7 +264,7 @@
                 <img src="img/MV.jpg" class="studio-img" alt="">
 
                 <div class="bookn">
-                    <a href="#screen-4"><button>Book now</button></a>
+                    <button onclick="showScreen('booking')">Book now</button>
                     <p>From £35/hr</p>
                 </div>
 
@@ -321,7 +320,7 @@
 
           
              <!-- Joe's Page -->
-            <section id="screen-4" class="screen">
+            <section id="booking" class="screen">
           
  
 <div class="calendar">
@@ -539,7 +538,7 @@
 
     <p class="time-text">10:00 - 11:30</p>
 
-    <button class="checkout-btn">
+    <button class="checkout-btn" onclick="showScreen ('Confirmation')">
         Proceed to checkout
     </button>
 
@@ -577,7 +576,7 @@
 
     <p class="time-text">10:00 - 11:30</p>
 
-    <button class="checkout-btn">Proceed to checkout</button>
+    <button class="checkout-btn" onclick="showScreen('Confirmation')">Proceed to checkout</button>
 
 </section>
 
@@ -614,7 +613,7 @@
 
     <p class="time-text">10:00 - 11:30</p>
 
-    <button class="checkout-btn">Proceed to checkout</button>
+    <button class="checkout-btn" onclick="showScreen('Confirmation')">Proceed to checkout</button>
 
 </section>
 

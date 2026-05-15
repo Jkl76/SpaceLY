@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpaceLY</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="JS/script.js"></script>
 </head>
 <body>
       <!-- header -->
@@ -15,15 +16,27 @@
         </header>
 
         <main>
-            <!-- SCREEN 1 -->
-            <section id="homepage">
+            <!-- SCREEN Homepage -->
+            <section id="homepage" class="active-screen">
                 <div class="p-title-bar">
                 <h1>Spacely</h1>
                 </div>
 
                 <!--image slideshow -->
                 
-                <hr>
+       <section class="carousel">
+        <button class="prev">&#10094;</button>
+        <div class="slides">
+            <img src="img/Studio 1.jpg" alt="studio" class="carousel-img active">
+            <img src="img/Studio 2.jpg" alt="studio" class="carousel-img">
+            <img src="img/Studio 3.jpg" alt="studio" class="carousel-img">
+            <img src="img/Studio 4.jpeg" alt="studio" class="carousel-img">
+            <img src="img/Studio 5.jpg" alt="studio" class="carousel-img">
+        </div>
+        <div class="carousel-text"><h2>Book your space now</h2></div>
+
+        <button class="next">&#10095;</button>
+       </section>
 
                 <!-- booking form -->
                  <div class="bookn">
@@ -48,48 +61,80 @@
                      style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
                      
                      <!--submit-->
-                        <button class="black-btn" type="submit">Search studios near me</button>
+                        <button class="black-btn" type="submit" onclick="showScreen('search-page')">Search studios near me</button>
                     </form>
 
                  </div>
                 
+              
 
                 
             </section>
 
-            
 
-             <!-- SCREEN 2 -->
-            <section id="screen-2">
-                <h3>Screen 2</h3>
-                <p>This is the Second screen's content</p>
-                <img src="https://picsum.photos/200/300" alt="A Random Image">
+             <!-- SEARCH PAGE -->
+            <section id="search-page" class="screen">
+                <div class="studio-box" onclick="showScreen('shmu')">
+                    <img src="img/Shmu pic.jpg" alt="studio" class="studio-img">
+                    
+                    <div class="boxT">
+                    <h3>SHMU Radio</h3>
+                    <p>Podcast Studio</p>
+                    <span>£40/hr</span>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="studio-box" onclick="showScreen('Captain')">
+                    <a href="#Captain">
+                    <img src="img/captaintoms.jpg" alt="studio" class="studio-img">
+                    
+                    <div class="boxT">
+                    <h3>Captain Toms</h3>
+                    <p>Recording/ Practice room</p>
+                    <span>£30/hr</span>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="studio-box" onclick="showScreen('Musical')">
+                    <a href="#Musical">
+                    <img src="img/MV.jpg" alt="studio" class="studio-img">
+                    
+                    <div class="boxT">
+                    <h3>Musical Vision</h3>
+                    <p>Practice Room</p>
+                    <span>£35/hr</span>
+                    </div>
+                    </a>
+                </div>
             </section>
 
            <!-- SCREEN SHMU-->
-            <section id="shmu">
+            <section id="shmu" class="screen">
                 <div class="p-title-bar">
-                <a href="screen-2"> <img src="img/93634.png" class="bck" alt="" ></a>   
+                <a href="#search-page"> <img src="img/93634.png" class="bck" alt="" ></a>   
                 <h1>SHMU Radio</h1>
                 </div>
                
                 <img src="img/Shmu pic.jpg" class="studio-img" alt="">
 
                 <div class="bookn">
-                    <button>Book now</button>
+              <button onclick="showScreen('booking')">Book now</button> 
+                  
                     <p>From £40/hr</p>
                 </div>
 
                 <div class="info-links">
-                    <p>Overview</p>
-                    <p>Equipment</p>
-                    <p>Opening Times</p>
-                    <p>Location</p>
+                    <a href="#SHA">Overview</a>
+                    <a href="#SHEQUIP">Equipment</a>
+                    <a href="#SHOPEN">Opening Times</a>
+                    <a href="#SHLOC">Location</a>
                 </div>
                 
                 <hr>
               
-                <h2>About Studio</h2>
+                <h2 id="SHA">About Studio</h2>
                 <p>Established as a charity in 2003, Station House Media Unit (shmu), is one of the core cultural organisations in North East Scotland 
                 and is at the forefront of community media development in the UK.</p>
 
@@ -103,7 +148,7 @@
             
                 <hr>
             
-                <h3>Equipment</h3>
+                <h3 id="SHEQUIP">Equipment</h3>
               
                 <ul>
                 <li>Mic Stands</li>
@@ -114,7 +159,7 @@
                 
                 <hr>
               
-                <h3>Opening Times</h3>
+                <h3 id="SHOPEN">Opening Times</h3>
                 
                 <ul>
                 <li>Monday: 10am - 10pm</li>
@@ -127,43 +172,42 @@
                 </ul>
                
                 <hr>
-                <h3>Location</h3>
-                <ul>
-                <a href="https://www.google.com/maps/place/SHMU/@57.1723874,-2.1333105,17z/data=!3m1!4b1!4m6!3m5!1s0x488411f86ebbdcbf:
-                        0xa67bf074764845bf!8m2!3d57.1723845!4d-2.1307356!16s%2Fg%2F1hc4kspkp?entry=ttu&g_ep=
-                        EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">Woodside, Aberdeen AB24 2WB</a>
+                <h3 id="SHLOC">Location</h3>
+               
+
+                  <div class="map-link">
+                    <a href="https://www.google.com/maps/place/SHMU/@57.1723874,-2.1333105,17z/data=!3m1!4b1!4m6!3m5!1s0x488411f86ebbdcbf:
+                            0xa67bf074764845bf!8m2!3d57.1723845!4d-2.1307356!16s%2Fg%2F1hc4kspkp?entry=ttu&g_ep=
+                            EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Woodside, Aberdeen AB24 2WB</a>
+                  </div>
 
             </section>
 
-
-            <!-- screen Capton Toms -->
-
             <!-- screen Captain Toms -->
 
-             
-            <section id="Captain">
+            <section id="Captain" class="screen">
                 <div class="p-title-bar">
-                <a href="screen-2"> <img src="img/93634.png" class="bck" alt="" ></a>   
+                <a href="#search-page"> <img src="img/93634.png" class="bck" alt="" ></a>   
                 <h1>Captain Toms</h1>
                 </div>
                
                 <img src="img/captaintoms.jpg" class="studio-img" alt="">
 
                 <div class="bookn">
-                    <button>Book now</button>
-                    <p>From £40/hr</p>
+                    <button onclick="showScreen('booking')">Book now</button>
+                    <p>From £30/hr</p>
                 </div>
 
                 <div class="info-links">
-                    <p>Overview</p>
-                    <p>Equipment</p>
-                    <p>Opening Times</p>
-                    <p>Location</p>
+                    <a href="#CAPA">Overview</a>
+                    <a href="#CAPEQUIP">Equipment</a>
+                    <a href="#CAPOPEN">Opening Times</a>
+                    <a href="#CAPLOC">Location</a>
                 </div>
                 
                 <hr>
               
-                <h2>About Studio</h2>
+                <h2 id="CAPA">About Studio</h2>
                 <p>Looking for a groovy recording studio that will help you capture the essence of your music and take it to the next level? 
                 Then look no further, my friend! Our cozy and chilled-out studio is the perfect place for musicians who want to create something truly special.</p>
 
@@ -176,7 +220,7 @@
             
                 <hr>
             
-                <h3>Equipment</h3>
+                <h3 id="CAPEQUIP">Equipment</h3>
               
                 <ul>
                 <li>Mic Stands</li>
@@ -187,7 +231,7 @@
                 
                 <hr>
               
-                <h3>Opening Times</h3>
+                <h3 id="CAPOPEN">Opening Times</h3>
                 
                 <ul>
                 <li>Monday: 12pm - 12am</li>
@@ -200,37 +244,40 @@
                 </ul>
                
                 <hr>
-                <h3>Location</h3>
-                <ul>
-                <a href="https://www.google.com/maps/place/Captain+Toms/@57.1520374,-2.1138801,17z/data=
-                !3m2!4b1!5s0x48840e18b1f1add5:0x6a94b5c1c93f4d53!4m6!3m5!1s0x48840e1f3248b233:0xf5d94dd101fd1529!8m2!3d57.
-                1520346!4d-2.1090092!16s%2Fg%2F1tfkqb6d?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">11-15 Ann St, Aberdeen AB25 3LH</a>
+                <h3 id="CAPLOC">Location</h3>
+                <div class="map-link">
+                    <a href="https://www.google.com/maps/place/Captain+Toms/@57.1520374,-2.1138801,17z/data=
+                    !3m2!4b1!5s0x48840e18b1f1add5:0x6a94b5c1c93f4d53!4m6!3m5!1s0x48840e1f3248b233:0xf5d94dd101fd1529!8m2!3d57.
+                    1520346!4d-2.1090092!16s%2Fg%2F1tfkqb6d?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">11-15 Ann St, Aberdeen AB25 3LH</a>
+                </div>
             </section>
 
+
             <!-- Musical Vision -->
-            <section id="Musical">
+
+            <section id="Musical" class="screen">
                 <div class="p-title-bar">
-                <a href="screen-2"> <img src="img/93634.png" class="bck" alt="" ></a>   
+                <a href="#search-page"> <img src="img/93634.png" class="bck" alt="" ></a>   
                 <h1>Musical Vision</h1>
                 </div>
                
                 <img src="img/MV.jpg" class="studio-img" alt="">
 
                 <div class="bookn">
-                    <button>Book now</button>
-                    <p>From £40/hr</p>
+                    <button onclick="showScreen('booking')">Book now</button>
+                    <p>From £35/hr</p>
                 </div>
 
                 <div class="info-links">
-                    <p>Overview</p>
-                    <p>Equipment</p>
-                    <p>Opening Times</p>
-                    <p>Location</p>
+                    <a href="#MUA">Overview</a>
+                    <a href="#MUEQUIP">Equipment</a>
+                    <a href="#MUOPEN">Opening Times</a>
+                    <a href="#MULOC">Location</a>
                 </div>
                 
                 <hr>
               
-                <h2>About Studio</h2>
+                <h2 id="MUA">About Studio</h2>
                 <p>Our rehearsal rooms contain a PA system with 3 microphones, a drumkit (minus cymbals) with a snare and single kick pedal. 
                 Two guitar amplifiers and a bass amplifier.In addition there are keyboard amplifiers if you need one please ask.
                 Don’t be afraid to ask if you need help setting something up!</p>
@@ -245,7 +292,7 @@
             
                 <hr>
             
-                <h3>Equipment</h3>
+                <h3 id="MUEQUIP">Equipment</h3>
               
                 <ul>
                 <li>Mic Stands</li>
@@ -256,7 +303,7 @@
                 
                 <hr>
               
-                <h3>Opening Times</h3>
+                <h3 id="MUOPEN">Opening Times</h3>
                 
                 <ul>
                 <li>Monday to Friday: 10am - 10pm</li>
@@ -264,14 +311,14 @@
                 </ul>
                
                 <hr>
-                <h3>Location</h3>
-                <ul>
-                <a href="https://www.google.com/maps/place/Musical+Vision+Ltd/@57.1537369,-2.1015959,17z/data=!3m1!4b1!4m6!3m5!1s0x48840e16f4ecbf0d:
-                0x7fccccc5dc4eaedd!8m2!3d57.153734!4d-2.099021!16s%2Fg%2F1td0014x?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">67-69 Nelson St, Aberdeen AB24 5ER</a>
+                <h3 id="MULOC">Location</h3>
+                <div class="map-link">
+                    <a href="https://www.google.com/maps/place/Musical+Vision+Ltd/@57.1537369,-2.1015959,17z/data=!3m1!4b1!4m6!3m5!1s0x48840e16f4ecbf0d:
+                    0x7fccccc5dc4eaedd!8m2!3d57.153734!4d-2.099021!16s%2Fg%2F1td0014x?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">67-69 Nelson St, Aberdeen AB24 5ER</a>
+                </div>
             </section>
 
-           
-
+          
              <!-- Joe's Page -->
             <section id="screen-4">
 
@@ -279,6 +326,8 @@
 
   </style>
 
+            <section id="booking" class="screen">
+          
  
 <div class="calendar">
 <div class="header">
@@ -589,66 +638,129 @@
 
 
                
+</script>               
             </section>
-
-
-
-
-
-
-            
+   
              <!-- SCREEN 5 -->
-            <section id="screen-5">
-                
-            <div class="checkout-top">
-                <img src="img/" alt="logo" class="studio-img">
-                <h1>SpaceLY</h1>
-            </div>
-
-            <h2>Customer Details</h2>
-
-            <div class="checkout-form">
-                <input type="text" placeholder="Forename">
-                <input type="text" placeholder="Surname">
-
-                <input type="email" placeholder="Email Address">
-                <input type="text" placeholder="Phone Number">
-
-                <input type="text" placeholder="City" class="full-input">
-            </div>
+            <section id="screen-5" class="screen">
 
 
+    <h2 class="checkout-title">Customer Details</h2>
+
+    <div class="checkout-form">
+        <input type="text" placeholder="Forename">
+        <input type="text" placeholder="Surname">
+
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number">
+
+        <input type="text" placeholder="City" class="full-width">
+    </div>
+
+    <hr>
+
+    <h2 class="checkout-title">Bank Account Details</h2>
+
+    <div class="checkout-form">
+        <input type="text" placeholder="Account Number">
+        <input type="text" placeholder="Expiry date">
+
+        <input type="text" placeholder="Name on card">
+        <input type="text" placeholder="Security code">
+    </div>
+
+    <hr>
+
+    <h2 class="checkout-title">Order Summary</h2>
+
+    <img src="img/Out S.jpg" alt="studio" class="checkout-image">
+
+    <p class="time-text">10:00 - 11:30</p>
+
+    <button class="checkout-btn" onclick="showScreen ('Confirmation')">
+        Proceed to checkout
+    </button>
+
+</section>
+
+<!-- CAPTAIN TOMS CHECKOUT -->
+<section id="captain-checkout" class="screen">
+
+    <h2 class="checkout-title">Customer Details</h2>
+
+    <div class="checkout-form">
+        <input type="text" placeholder="Forename">
+        <input type="text" placeholder="Surname">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number">
+        <input type="text" placeholder="City" class="full-width">
+    </div>
+
+    <hr>
+
+    <h2 class="checkout-title">Bank Account Details</h2>
+
+    <div class="checkout-form">
+        <input type="text" placeholder="Account Number">
+        <input type="text" placeholder="Expiry date">
+        <input type="text" placeholder="Name on card">
+        <input type="text" placeholder="Security code">
+    </div>
+
+    <hr>
+
+    <h2 class="checkout-title">Order Summary</h2>
+
+    <img src="img/captaintoms.jpg" alt="Captain Toms" class="checkout-image">
+
+    <p class="time-text">10:00 - 11:30</p>
+
+    <button class="checkout-btn" onclick="showScreen('Confirmation')">Proceed to checkout</button>
+
+</section>
 
 
+<!-- MUSICAL VISION CHECKOUT -->
+        <section id="musical-checkout" class="screen">
 
+    <h2 class="checkout-title">Customer Details</h2>
 
+    <div class="checkout-form">
+        <input type="text" placeholder="Forename">
+        <input type="text" placeholder="Surname">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number">
+        <input type="text" placeholder="City" class="full-width">
+    </div>
 
+    <hr>
 
+    <h2 class="checkout-title">Bank Account Details</h2>
 
+    <div class="checkout-form">
+        <input type="text" placeholder="Account Number">
+        <input type="text" placeholder="Expiry date">
+        <input type="text" placeholder="Name on card">
+        <input type="text" placeholder="Security code">
+    </div>
 
+    <hr>
 
+    <h2 class="checkout-title">Order Summary</h2>
 
+    <img src="img/MV.jpg" alt="Musical Vision" class="checkout-image">
 
+    <p class="time-text">10:00 - 11:30</p>
 
+    <button class="checkout-btn" onclick="showScreen('Confirmation')">Proceed to checkout</button>
+
+</section>
+
+             <!-- COnfirmation -->
+            <section id="Confirmation" class="screen"> 
+              <h1>Order Confirmed!!!</h1>               
+                <img src="img/Out S.jpg" alt="studio" class="checkout-image">
             </section>
-
-
-
-
-
-
-
-
-
-
-
-             <!-- SCREEN 6 -->
-            <section id="screen-6">
-                <h3>Screen 6</h3>
-                <p>This is the Third screen's content</p>
-                <img src="https://picsum.photos/200/300" alt="A Random Image">
-            </section>
-
 
         </main>
     </div>
@@ -668,5 +780,70 @@
         <p>Back</p>
        </a>
     </nav>
+
+<!-- Carousel Scripts -->
+<script>
+const slides = document.querySelectorAll('.carousel-img');
+
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+let currentIndex = 0;
+
+function showSlide(index) {
+
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    slides[index].classList.add('active');
+}
+
+nextBtn.addEventListener('click', () => {
+
+    currentIndex++;
+    if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+    showSlide(currentIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+  showSlide(currentIndex);
+});
+
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+  function showScreen(screenId){
+    $(".screen, .active-screen")
+    .removeClass("active-screen")
+    .addClass("screen")
+
+    $("#" + screenId)
+    .removeClass("screen")
+    .addClass("active-screen");
+  }
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

@@ -1,40 +1,20 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
 
-/*submit button*/
-.black-btn {
-    background-color: #000;
-    color: #fff;
-    padding: 12px 24px;
-    border: 2px solid #000;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-
-  .black-btn:hover {
-    background-color: #222;
-  }
-
-  .black-btn:active {
-    background-color: #111;
-  }
+.screen {
+    display: none;
+}
+.active-screen {
+    display: block;
+}
 
 body {
     padding-bottom: 100px;
     max-width: 700px;
-    margin: 0 auto;
-}
-
-/**/
-
-.container {
-    width: 90%;
     margin: 0 auto;
 }
 
@@ -43,94 +23,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    position: sticky;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    max-width: 700px;
     
     background: #793693;
+     z-index: 1000;
 }
 .logo {
-    width: 50px;
+    width: 35px;
 }
 .top-bar h1 {
+    font-size: 24px;
     margin-right: 20px;
     margin-left: auto;
     color: black;
 }
 
 
-/* SCREEN 2 */
-
-#screen-2 {
-    background: red;
-}
-
-/* SCREEN SHMU */
-
-#shmu {
-background: #9B66B0;
-padding: 20px;
- color: white;
-}
-
-.p-title-bar {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.bck {
-    width: 35px;
-    height: 35px;
-}
-.studio-img {
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-.bookn {
-    margin-top: 15px;
-}
-
-.bookn button {
-    background: #7E3D98;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.info-links {
-    display: flex;
-    justify-content: space-between;
-    /* margin-top: 25px; */
-    font-size: 14px;
-}
-
-hr {
-    border-color: #732990;
-    margin: 5px 0;
-}
-
-h3{
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-ul {
-    margin-top: 15px;
-    margin-bottom: 25px;
-    padding-left: 20px;
-}
-
-
-
-
-/* Musical Vision */
-#Musical {
+/*homepage section*/
+#homepage {
 background: #9B66B0;
 padding: 20px;
  color: white;
@@ -192,6 +107,254 @@ ul {
 .address {
     color: white;
 }
+
+/* image slideshow  */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.slides {
+    position: relative;
+}
+.carousel-img.active {
+    display: block;
+}
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    padding: 10px;
+    border: none;
+
+    font-size: 20px;
+    z-index: 100;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+/*submit button*/
+.black-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .black-btn:hover {
+    background-color: #222;
+  }
+
+  .black-btn:active {
+    background-color: #111;
+  }
+
+
+/* SEARCH PAGE */
+
+#search-page {
+    background: #9B66B0;
+    padding: 20px;
+    color: white;
+}
+.studio-box {
+    background: #7E3D98;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.boxT{
+    padding: 7px;
+}
+.studio-box h3 {
+    margin-bottom: 8px;
+}
+.studio-box p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.studio-box span {
+    font-weight: bold;
+  
+}
+.studio-box a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* product map */
+.map-link a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* Product info */
+.info-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.info-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* Product nav */
+.p-title-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.bck {
+    width: 35px;
+    height: 35px;
+}
+.studio-img {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.bookn {
+    margin-top: 15px;
+}
+
+.bookn button {
+    background: #7E3D98;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+button {
+    cursor: pointer;
+}
+/* SCREEN SHMU */
+
+#shmu {
+background: #9B66B0;
+padding: 20px;
+ color: white;
+}
+hr {
+    border-color: #732990;
+    margin: 5px 0;
+}
+
+h3{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+
+/*captain*/
+#Captain {
+background: #9B66B0;
+padding: 20px;
+ color: white;
+}
+hr {
+    border-color: #732990;
+    margin: 5px 0;
+}
+
+h3{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+
+
+/* Musical Vision */
+#Musical {
+background: #9B66B0;
+padding: 20px;
+ color: white;
+}
+
+hr {
+    border-color: #732990;
+    margin: 5px 0;
+}
+
+h3{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
 
 /* Calender */
 
@@ -311,250 +474,128 @@ padding: 20px;
 
   }
 
+  
+/*Order page SCEEN 5*/
 
+/* SCREEN 5 CHECKOUT */
 
-
-/*homepage section*/
-#homepage {
-background: #9B66B0;
-padding: 20px;
- color: white;
-}
-
-.p-title-bar {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.bck {
-    width: 35px;
-    height: 35px;
-}
-.studio-img {
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-.bookn {
-    margin-top: 15px;
-}
-
-.bookn button {
-    background: #7E3D98;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.info-links {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-hr {
-    border-color: #732990;
-    margin: 5px 0;
-}
-
-h3{
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-ul {
-    margin-top: 15px;
-    margin-bottom: 25px;
-    padding-left: 20px;
-}
-
-.address {
-    color: white;
-}
-
-
-
-/* FOOTER NAVIGATION */
-
-
-
-.navb {
-    display: flex;
-    justify-content: space-around;
-    background:  #302335;
-    align-items: center;
-    color: white;
-    padding: 15px 0;
-    bottom: 0;
-    width: 100%;   
-}
-
-.navb a {
-text-decoration: none;
-color: white;
-}
-
-/*captain*/
-#Captain {
-background: #9B66B0;
-padding: 20px;
- color: white;
-}
-
-.p-title-bar {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.bck {
-    width: 35px;
-    height: 35px;
-}
-.studio-img {
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-.bookn {
-    margin-top: 15px;
-}
-
-.bookn button {
-    background: #7E3D98;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.info-links {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-hr {
-    border-color: #732990;
-    margin: 5px 0;
-}
-
-h3{
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-ul {
-    margin-top: 15px;
-    margin-bottom: 25px;
-    padding-left: 20px;
-}
-
-.address {
-    color: white;
-}
-
-
-
-/* FOOTER NAVIGATION */
-
-
-
-/*booking*/
 #screen-5 {
     background: #9B66B0;
     padding: 20px;
-     color: white;
-    }
-    
-    .p-title-bar {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-    .bck {
-        width: 35px;
-        height: 35px;
-    }
-    .studio-img {
-        width: 100%;
-        border-radius: 20px;
-        margin-top: 20px;
-    }
-    .bookn {
-        margin-top: 15px;
-    }
-    
-    .bookn button {
-        background: #7E3D98;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 20px;
-    }
-    
-    .info-links {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-    }
-    
-    hr {
-        border-color: #732990;
-        margin: 5px 0;
-    }
-    
-    h3{
-        margin-top: 30px;
-        margin-bottom: 15px;
-    }
-    
-    p {
-        margin-bottom: 20px;
-        line-height: 1.6;
-    }
-    
-    ul {
-        margin-top: 15px;
-        margin-bottom: 25px;
-        padding-left: 20px;
-    }
-    
-    .address {
-        color: white;
-    }
-    
-    
-    
-    /* FOOTER NAVIGATION */
-    
-    
-    
-    .navb {
+    color: white;
+}
+
+.checkout-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.checkout-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkout-form input {
+    width: 47%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    text-align: center;
+}
+
+.checkout-form input::placeholder {
+    color: white;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.checkout-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.time-text {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #7E3D98;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#screen-5 hr {
+    border: 1px solid #732990;
+    margin: 25px 0;
+}
+
+#captain-checkout,
+#musical-checkout {
+    background: #9B66B0;
+    padding: 20px;
+    color: white;
+}
+
+#captain-checkout hr,
+#musical-checkout hr {
+    border: 1px solid #732990;
+    margin: 25px 0;
+}
+
+#Confirmation {
+    background: #9B66B0;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Navigation */
+
+.navb {
         display: flex;
         justify-content: space-around;
-        background:  #302335;
         align-items: center;
+
         color: white;
-        padding: 15px 0;
+        background:  #302335;
+
+        position: fixed;
         bottom: 0;
-        width: 100%;   
+
+        width: 100%;
+        max-width: 700px;
+
+        
+        padding: 12px 0;
+       
+        z-index: 1000;
     }
     
     .navb a {
     text-decoration: none;
     color: white;
     }
-/*Order page SCEEN 5*/
+
 
 

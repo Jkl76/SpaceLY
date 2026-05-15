@@ -681,6 +681,29 @@ prevBtn.addEventListener('click', () => {
 
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+  function showScreen(screenId){
+    $(".screen, .active-screen")
+    .removeClass("active-screen")
+    .addClass("screen")
+
+    $("#" + screenId)
+    .removeClass("screen")
+    .addClass("active-screen");
+  }
+</script>
+
+<!-- <SCript>
+  $("#homepage").show();
+  function showScreen(screenId){
+    $(".screen").hide();
+    $("#" + screenId).show ();
+  }
+</SCript> -->
+
 
 
 

@@ -364,6 +364,7 @@ ul {
  
  
 /* Calender */
+
 .calendar {
  
     width: 320px;
@@ -489,7 +490,7 @@ ul {
     #booking{
          background: #9B66B0;
     padding: 20px;
-  
+  text-align: center;
     }
     .booking-container {
         max-width: 400px;

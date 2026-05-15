@@ -10,6 +10,7 @@
 }
 .active-screen {
     display: block;
+    min-height: calc(100vh - 100px);
 }
  
 body {
@@ -534,7 +535,7 @@ ul {
  
 #screen-5 {
     background: #9B66B0;
-    padding: 20px;
+    padding: 75px 20px 20px;
     color: white;
 }
  
@@ -599,7 +600,7 @@ ul {
 #captain-checkout,
 #musical-checkout {
     background: #9B66B0;
-    padding: 20px;
+    padding: 75px 20px 20px;
     color: white;
 }
  

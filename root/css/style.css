@@ -194,6 +194,12 @@ ul {
 }
 
 /* Calender */
+
+#booking{
+background: #9B66B0;
+padding: 20px;
+ color: white;
+}
 .calendar {
 
     width: 320px;
@@ -205,6 +211,8 @@ ul {
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 
     padding: 15px;
+    
+    
 
   }
   .header {

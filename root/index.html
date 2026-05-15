@@ -277,11 +277,7 @@
 
                 <style>
 
-  
- 
-  
- 
-</style>
+  </style>
 
  
 <div class="calendar">
@@ -462,7 +458,128 @@
   renderCalendar();
 </script>
  
-
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+    .booking-container {
+        max-width: 400px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+    input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+    }
+    .time-slots {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .time-slot {
+        padding: 10px 15px;
+        background: #e0e0e0;
+        border-radius: 5px;
+        cursor: pointer;
+        user-select: none;
+        transition: background 0.3s;
+    }
+    .time-slot:hover {
+        background: #d0d0d0;
+    }
+    .time-slot.selected {
+        background: #4CAF50;
+        color: white;
+    }
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #45a049;
+    }
+</style>
+ 
+ 
+ 
+<div class="booking-container">
+    <h2>Book a Time Slot</h2>
+   
+   
+ 
+    <label>Select Time:</label>
+    <div class="time-slots" id="timeSlots"></div>
+ 
+    <button id="bookBtn">Book Now</button>
+</div>
+ 
+<script>
+    // Predefined time slots
+    const slots = [
+        "09:00 - 09:45",
+        "09:45 - 10:30",
+        "10:30 - 11:15",
+        "11:15 - 12:00",
+        "13:00 - 13:45",
+        "13:45 - 14:30",
+        "14:30 - 15:15",
+        "15:15 - 16:00"
+    ];
+ 
+    const timeSlotsContainer = document.getElementById("timeSlots");
+    let selectedSlot = null;
+ 
+    // Render time slots
+    slots.forEach(slot => {
+        const div = document.createElement("div");
+        div.classList.add("time-slot");
+        div.textContent = slot;
+        div.addEventListener("click", () => {
+            document.querySelectorAll(".time-slot").forEach(s => s.classList.remove("selected"));
+            div.classList.add("selected");
+            selectedSlot = slot;
+        });
+        timeSlotsContainer.appendChild(div);
+    });
+ 
+    // Booking button click
+    document.getElementById("bookBtn").addEventListener("click", () => {
+        const date = document.getElementById("date").value;
+        if (!date) {
+            alert("Please select a date.");
+            return;
+        }
+        if (!selectedSlot) {
+            alert("Please select a time slot.");
+            return;
+        }
+        alert(`Booking confirmed for ${date} at ${selectedSlot}`);
+    });
+</script>
+ 
 
  
 

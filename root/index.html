@@ -45,7 +45,7 @@
                    
  
                     <!-- Location -->
-                    <form action="submit" method="post">
+                    <form onsubmit="handleSearch(event)">
                      <h3>Location</h3>
                      <input class="input1" type="Text" placeholder="Enter Location" required>
 
@@ -58,7 +58,7 @@
                      <input class="input1" type="time" placeholder="Enter time" required>
                      
                      <!--submit-->
-                        <button class="black-btn" type="submit" onclick="showScreen('search-page')">Search studios near me</button>
+                        <button class="black-btn" type="submit">Search studios near me</button>
                     </form>
  
                  </div>
@@ -755,6 +755,11 @@ prevBtn.addEventListener('click', () => {
     .removeClass("screen")
     .addClass("active-screen");
   }
+  function handleSearch(e) {
+  if (!e.target.checkValidity()) return;
+  e.preventDefault();
+  showScreen('search-page');
+}
  
 </script>
  

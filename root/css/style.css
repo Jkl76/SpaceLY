@@ -43,7 +43,11 @@ body {
     color: black;
 }
 
-
+.input1{
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px;
+}
 /*homepage section*/
 #homepage {
 background: #9B66B0;

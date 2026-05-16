@@ -744,7 +744,7 @@ ul {
         align-items: center;
  
         color: white;
-        background:  #302335;
+        background:  #793693;
  
         position: fixed;
         bottom: 0;
@@ -753,15 +753,27 @@ ul {
         max-width: 700px;
  
        
-        padding: 12px 0;
+        padding: 5px 5px;
        
         z-index: 1000;
     }
    
-    .navb a {
-    text-decoration: none;
-    color: white;
-    }
+    .navicons {
+    width: 28px;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.navicons:hover {
+    transform: scale(1.1);
+}
+
+.navicons:active {
+    transform: scale(0.95);
+}
  
  
  

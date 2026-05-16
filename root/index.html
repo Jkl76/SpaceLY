@@ -11,7 +11,7 @@
 <body>
       <!-- header -->
         <header  class="top-bar">
-            <img src="img/logo.png" class="logo" alt="logo">
+            <img onclick="showScreen('homepage')" src="img/logo.png" class="logo" alt="logo">
             <h1>SpaceLY</h1>
         </header>
  
@@ -576,10 +576,9 @@
  
     <!-- Navigation -->
     <nav class="navb">
-        <p>Home</p>
-        <p>Search</p>
-        <p>Bookings</p>
-        <p>Back</p>
+        <img onclick="showScreen('homepage')" src="img/Home icon.png" class="navicons" alt="home">
+        <img onclick="showScreen('search-page')" src="img/Search.png" class="navicons" alt="search">
+        <img onclick="goBack()" src="img/Back icon.png" class="navicons" alt="back">
     </nav>
  
 <!-- Carousel Scripts -->

@@ -322,7 +322,7 @@
          
  <div class="booking-layout">
     <h2 class="booking-title">Book Your Studio</h2>
-    <img src="img/Shmu pic.jpg" class="book-img" alt="">
+    <img src="img/Shmu pic.jpg" class="book-img" alt="SHMU">
     <hr>
  <div class="booking-card">  
 <div class="calendar">
@@ -392,7 +392,7 @@
 
     <div class="booking-layout">
     <h2 class="booking-title">Book Your Studio</h2>
-    <img src="img/Shmu pic.jpg" class="book-img" alt="">
+    <img src="img/captaintoms.jpg" class="book-img" alt="Captain Toms">
     <hr>
  <div class="booking-card">  
 <div class="calendar">
@@ -433,7 +433,7 @@
 
     <div class="booking-layout">
     <h2 class="booking-title">Book Your Studio</h2>
-    <img src="img/Shmu pic.jpg" class="book-img" alt="">
+    <img src="img/MV.jpg" class="book-img" alt="Musical Vision">
     <hr>
  <div class="booking-card">  
 <div class="calendar">
@@ -648,15 +648,26 @@ prevBtn.addEventListener('click', () => {
  
  
 <script>
-  function showScreen(screenId){
-    $(".screen, .active-screen")
-    .removeClass("active-screen")
-    .addClass("screen")
- 
-    $("#" + screenId)
-    .removeClass("screen")
-    .addClass("active-screen");
-  }
+ function showScreen(screenId) {
+
+    const currentScreen = $(".active-screen");
+    const nextScreen = $("#" + screenId);
+
+    currentScreen.removeClass("active-screen");
+
+    setTimeout(() => {
+        currentScreen.addClass("screen");
+
+        nextScreen.removeClass("screen");
+
+        setTimeout(() => {
+            nextScreen.addClass("active-screen");
+        }, 20);
+
+    }, 250);
+}
+
+
   function handleSearch(e) {
   if (!e.target.checkValidity()) return;
   e.preventDefault();

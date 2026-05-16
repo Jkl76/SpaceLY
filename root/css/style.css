@@ -5,34 +5,23 @@
     box-sizing: border-box;
 }
  
+
+
 .screen {
-    opacity: 0;
-    transform: translateX(30px);
-    pointer-events: none;
-
-    position: absolute;
-    width: 100%;
-    max-width: 700px;
-
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none;
 }
 
 .active-screen {
-    animation: fadePage 0.35s ease;
-    opacity: 1;
-    transform: translateX(0);
-
-    pointer-events: auto;
-    position: relative;
-
-    min-height: calc(100vh - 100px);
+    display: block;
+    animation: slideIn 0.5s ease;
 }
 
 
-@keyframes fadePage {
+
+@keyframes slideIn {
     from {
-        opacity: 0;
-        transform: translateY(15px);
+        opacity: 0.1;
+        transform: translateY(60px);
         filter: blur(4px);
     }
 
@@ -63,14 +52,23 @@ button:active {
 
  
 body {
-    padding-bottom: 100px;
+    min-height: 100vh;
+
     max-width: 700px;
     margin: 0 auto;
+
+    position: relative;
+    overflow-x: hidden;
 }
 main {
     padding-top: 70px;
-    padding-bottom: 0px;
+    padding-bottom: 80px;
     position: relative;
+     min-height: calc(100vh - 150px);
+}
+
+.screen, .active-screen {
+    min-height: calc(100vh - 150px);
 }
  
 /* header */
@@ -570,21 +568,12 @@ ul {
   /* booking times */
 
   
-    #booking-shmu {
+    #booking {
         background: #9B66B0;
         min-height: calc(100vh - 100px);
         padding: 30px 20px 120px;
     }
-    #booking-captain {
-        background: #9B66B0;
-        min-height: calc(100vh - 100px);
-        padding: 30px 20px 120px;
-    }
-    #booking-musical {
-        background: #9B66B0;
-        min-height: calc(100vh - 100px);
-        padding: 30px 20px 120px;
-    }
+
     .booking-container {
         width: 100%;
         max-width: 350px;

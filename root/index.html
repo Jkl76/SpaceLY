@@ -117,7 +117,7 @@
                 <img src="img/Shmu pic.jpg" class="studio-img" alt="">
  
                 <div class="bookn">
-              <button onclick="showScreen('booking-shmu')">Book now</button>
+              <button onclick="showScreen('booking')">Book now</button>
                  
                     <p>From £40/hr</p>
                 </div>
@@ -191,7 +191,7 @@
                 <img src="img/captaintoms.jpg" class="studio-img" alt="">
  
                 <div class="bookn">
-                    <button onclick="showScreen('booking-captain')">Book now</button>
+                    <button onclick="showScreen('booking')">Book now</button>
                     <p>From £30/hr</p>
                 </div>
  
@@ -261,7 +261,7 @@
                 <img src="img/MV.jpg" class="studio-img" alt="">
  
                 <div class="bookn">
-                    <button onclick="showScreen('booking-musical')">Book now</button>
+                    <button onclick="showScreen('booking')">Book now</button>
                     <p>From £35/hr</p>
                 </div>
  
@@ -318,11 +318,11 @@
          
              <!-- Joe's Page -->
               <!-- Book SHMU -->
-<section id="booking-shmu" class="screen">
+<section id="booking" class="screen">
          
  <div class="booking-layout">
-    <h2 class="booking-title">Book Your Studio</h2>
-    <img src="img/Shmu pic.jpg" class="book-img" alt="SHMU">
+    <h2 id="booking-title" class="booking-title">Book Your Studio</h2>
+    <img id="book-img" src="img/Studio 2.jpg " class="book-img" alt="SHMU">
     <hr>
  <div class="booking-card">  
 <div class="calendar">
@@ -343,6 +343,61 @@
     <div class="result" id="result">Select start date</div>
 </div>
  
+<script>
+    const datesEl = document.getElementById("dates");
+    const monthYearEl = document.getElementById("monthYear");
+    const resultEl = document.getElementById("result");
+    let currentDate = new Date();
+    let startDate = null;
+    let endDate = null;
+    function renderCalendar() {
+        datesEl.innerHTML = "";
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
+        const firstDay = new Date(year, month, 1).getDay();
+        const lastDate = new Date(year, month + 1, 0).getDate();
+        monthYearEl.innerText = currentDate.toLocaleString("default", {
+            month: "long",
+            year: "numeric"
+        });
+        for (let i = 0; i < firstDay; i++) {
+            datesEl.innerHTML += "<div></div>";
+        }
+        for (let day = 1; day <= lastDate; day++) {
+            const dateDiv = document.createElement("div");
+            dateDiv.innerText = day;
+            const thisDate = new Date(year, month, day);
+            const today = new Date();
+            // Today highlight
+            if (
+                day === today.getDate() &&
+                month === today.getMonth() &&
+                year === today.getFullYear()
+            ) {
+                dateDiv.classList.add("today");
+            }
+            // Range highlighting
+            if (startDate && thisDate.getTime() === startDate.getTime()) {
+                dateDiv.classList.add("start");
+            }
+            if (endDate && thisDate.getTime() === endDate.getTime()) {
+                dateDiv.classList.add("end");
+            }
+            if (
+                startDate &&
+                endDate &&
+                thisDate > startDate &&
+                thisDate < endDate
+            ) {
+                dateDiv.classList.add("in-range");
+            }
+            dateDiv.onclick = () => handleDateClick(thisDate);
+            datesEl.appendChild(dateDiv);
+        }
+    }
+</script>
+
+
  <hr>
  
 <div class="booking-container">
@@ -383,90 +438,11 @@
  
     
 </script>
-<button class="b-button" type="submit" onclick="showScreen('screen-5')">Book Studio</button>
- 
+<button class="b-button" onclick="showScreen('screen-5')">Book now</button>
+
 </section>
 
-<!-- Book Captain Toms -->
-<section id="booking-captain" class="screen">
 
-    <div class="booking-layout">
-    <h2 class="booking-title">Book Your Studio</h2>
-    <img src="img/captaintoms.jpg" class="book-img" alt="Captain Toms">
-    <hr>
- <div class="booking-card">  
-<div class="calendar">
-
-    <div class="header">
-        <button onclick="prevMonth()">❮</button>
-        <div class="monthYear" id="monthYear"></div>
-        <button onclick="nextMonth()">❯</button>
-    </div>
- 
-    <div class="days">
-        <div>Sun</div><div>Mon</div><div>Tue</div>
-        <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-    </div>
- 
-     <div class="dates" id="dates"></div>
- 
-    <div class="result" id="result">Select start date</div>
-</div>
- 
- <hr>
- 
-<div class="booking-container">
-    <h2>Book a Time Slot</h2>
-    <label>Select Time:</label>
-    <div class="time-slots" id="timeSlots"></div>  
-</div>
-</div>
-
-
-
-<button class="b-button" type="submit" onclick="showScreen('screen-5')">Book Studio</button>
-   </section>
-
-
-   <!-- Book Musical Vision -->
-<section id="booking-musical" class="screen">
-
-    <div class="booking-layout">
-    <h2 class="booking-title">Book Your Studio</h2>
-    <img src="img/MV.jpg" class="book-img" alt="Musical Vision">
-    <hr>
- <div class="booking-card">  
-<div class="calendar">
-
-    <div class="header">
-        <button onclick="prevMonth()">❮</button>
-        <div class="monthYear" id="monthYear"></div>
-        <button onclick="nextMonth()">❯</button>
-    </div>
- 
-    <div class="days">
-        <div>Sun</div><div>Mon</div><div>Tue</div>
-        <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-    </div>
- 
-     <div class="dates" id="dates"></div>
- 
-    <div class="result" id="result">Select start date</div>
-</div>
- 
- <hr>
- 
-<div class="booking-container">
-    <h2>Book a Time Slot</h2>
-    <label>Select Time:</label>
-    <div class="time-slots" id="timeSlots"></div>  
-</div>
-</div>
-
-
-
-<button class="b-button" type="submit" onclick="showScreen('screen-5')">Book Studio</button>
-   </section>
 
 
              <!-- SCREEN 5 -->
@@ -500,7 +476,7 @@
  
     <h2 class="checkout-title">Order Summary</h2>
  
-    <img src="img/Out S.jpg" alt="studio" class="checkout-image">
+    <img src="img/Studio 5.jpg" alt="studio" class="checkout-image">
  
     <p class="time-text">10:00 - 11:30</p>
  
@@ -592,7 +568,7 @@
                  </div>   
                  <hr>
                  <h2>Checkout other studios</h2>
-                <img src="img/Out S.jpg" alt="studio" class="checkout-image">
+                <img onclick="showScreen('search-page')" src="img/Studio 3.jpg" alt="studio" class="checkout-image">
             </section>
  
         </main>
@@ -677,18 +653,6 @@ prevBtn.addEventListener('click', () => {
 </script>
  
 <script>
- 
-  const datesEl = document.getElementById("dates");
- 
-  const monthYearEl = document.getElementById("monthYear");
- 
-  const resultEl = document.getElementById("result");
- 
-  let currentDate = new Date();
- 
-  let startDate = null;
- 
-  let endDate = null;
  
   function renderCalendar() {
  

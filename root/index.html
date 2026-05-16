@@ -117,7 +117,7 @@
                 <img src="img/Shmu pic.jpg" class="studio-img" alt="">
  
                 <div class="bookn">
-              <button onclick="showScreen('booking')">Book now</button>
+              <button onclick="showScreen('booking-shmu')">Book now</button>
                  
                     <p>From £40/hr</p>
                 </div>
@@ -191,7 +191,7 @@
                 <img src="img/captaintoms.jpg" class="studio-img" alt="">
  
                 <div class="bookn">
-                    <button onclick="showScreen('booking')">Book now</button>
+                    <button onclick="showScreen('booking-captain')">Book now</button>
                     <p>From £30/hr</p>
                 </div>
  
@@ -261,7 +261,7 @@
                 <img src="img/MV.jpg" class="studio-img" alt="">
  
                 <div class="bookn">
-                    <button onclick="showScreen('booking')">Book now</button>
+                    <button onclick="showScreen('booking-musical')">Book now</button>
                     <p>From £35/hr</p>
                 </div>
  
@@ -317,41 +317,39 @@
  
          
              <!-- Joe's Page -->
-<section id="booking" class="screen">
+              <!-- Book SHMU -->
+<section id="booking-shmu" class="screen">
          
  <div class="booking-layout">
     <h2 class="booking-title">Book Your Studio</h2>
     <img src="img/Shmu pic.jpg" class="book-img" alt="">
     <hr>
+ <div class="booking-card">  
 <div class="calendar">
-<div class="header">
-<button onclick="prevMonth()">❮</button>
-<div class="monthYear" id="monthYear"></div>
-<button onclick="nextMonth()">❯</button>
-</div>
+
+    <div class="header">
+        <button onclick="prevMonth()">❮</button>
+        <div class="monthYear" id="monthYear"></div>
+        <button onclick="nextMonth()">❯</button>
+    </div>
  
-  <div class="days">
-<div>Sun</div><div>Mon</div><div>Tue</div>
-<div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-</div>
+    <div class="days">
+        <div>Sun</div><div>Mon</div><div>Tue</div>
+        <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
  
-  <div class="dates" id="dates"></div>
+     <div class="dates" id="dates"></div>
  
-  <div class="result" id="result">Select start date</div>
+    <div class="result" id="result">Select start date</div>
 </div>
  
  <hr>
  
-
 <div class="booking-container">
     <h2>Book a Time Slot</h2>
-   
-   
- 
     <label>Select Time:</label>
-    <div class="time-slots" id="timeSlots"></div>
- 
-    
+    <div class="time-slots" id="timeSlots"></div>  
+</div>
 </div>
  
 <script>
@@ -386,10 +384,91 @@
     
 </script>
 <button class="b-button" type="submit" onclick="showScreen('screen-5')">Book Studio</button>
+ 
+</section>
 
-  
-            </section>
-   
+<!-- Book Captain Toms -->
+<section id="booking-captain" class="screen">
+
+    <div class="booking-layout">
+    <h2 class="booking-title">Book Your Studio</h2>
+    <img src="img/Shmu pic.jpg" class="book-img" alt="">
+    <hr>
+ <div class="booking-card">  
+<div class="calendar">
+
+    <div class="header">
+        <button onclick="prevMonth()">❮</button>
+        <div class="monthYear" id="monthYear"></div>
+        <button onclick="nextMonth()">❯</button>
+    </div>
+ 
+    <div class="days">
+        <div>Sun</div><div>Mon</div><div>Tue</div>
+        <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
+ 
+     <div class="dates" id="dates"></div>
+ 
+    <div class="result" id="result">Select start date</div>
+</div>
+ 
+ <hr>
+ 
+<div class="booking-container">
+    <h2>Book a Time Slot</h2>
+    <label>Select Time:</label>
+    <div class="time-slots" id="timeSlots"></div>  
+</div>
+</div>
+
+
+
+<button class="b-button" type="submit" onclick="showScreen('screen-5')">Book Studio</button>
+   </section>
+
+
+   <!-- Book Musical Vision -->
+<section id="booking-musical" class="screen">
+
+    <div class="booking-layout">
+    <h2 class="booking-title">Book Your Studio</h2>
+    <img src="img/Shmu pic.jpg" class="book-img" alt="">
+    <hr>
+ <div class="booking-card">  
+<div class="calendar">
+
+    <div class="header">
+        <button onclick="prevMonth()">❮</button>
+        <div class="monthYear" id="monthYear"></div>
+        <button onclick="nextMonth()">❯</button>
+    </div>
+ 
+    <div class="days">
+        <div>Sun</div><div>Mon</div><div>Tue</div>
+        <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
+ 
+     <div class="dates" id="dates"></div>
+ 
+    <div class="result" id="result">Select start date</div>
+</div>
+ 
+ <hr>
+ 
+<div class="booking-container">
+    <h2>Book a Time Slot</h2>
+    <label>Select Time:</label>
+    <div class="time-slots" id="timeSlots"></div>  
+</div>
+</div>
+
+
+
+<button class="b-button" type="submit" onclick="showScreen('screen-5')">Book Studio</button>
+   </section>
+
+
              <!-- SCREEN 5 -->
             <section id="screen-5" class="screen">
  
@@ -521,18 +600,10 @@
  
     <!-- Navigation -->
     <nav class="navb">
-       <a href="">
         <p>Home</p>
-       </a>
-       <a href="">
         <p>Search</p>
-       </a>
-       <a href="">
         <p>Bookings</p>
-       </a>
-       <a href="">
         <p>Back</p>
-       </a>
     </nav>
  
 <!-- Carousel Scripts -->

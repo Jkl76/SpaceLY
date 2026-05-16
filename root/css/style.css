@@ -278,8 +278,8 @@ ul {
     background: #7E3D98;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 14px 30px;
+    border-radius: 30px;
 }
 button {
     cursor: pointer;
@@ -322,8 +322,11 @@ padding: 20px;
  color: white;
 }
 hr {
-    border-color: #732990;
-    margin: 5px 0;
+    border:none;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin: 10px 0 20px
 }
  
 h3{
@@ -375,6 +378,12 @@ ul {
  
 /* Calender */
 
+.booking-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
 .book-img {
     width: 100%;
     max-height: 200px;
@@ -385,18 +394,14 @@ ul {
 
 .calendar {
  
-    width: 320px;
- 
+    width: 100%;
+    max-width: 350px;
     background: white;
- 
     border-radius: 12px;
- 
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
- 
-    padding: 15px;
-
-    margin-top: 50px;
-    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 20px;
+    /* margin-top: 50px;
+    margin-bottom: 30px; */
  
   }
   .booking-layout {
@@ -507,16 +512,16 @@ ul {
     #booking{
         background: #9B66B0;
         min-height: calc(100vh - 100px);
-        color: white;
         padding: 30px 20px 120px;
     }
     .booking-container {
-        max-width: 400px;
-        margin: auto;
+        width: 100%;
+        max-width: 350px;
+        /* margin: auto; */
         background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
     h2 {
         text-align: center;
@@ -558,9 +563,16 @@ ul {
     background: #d29ae8;
     color: #000;
     font-weight: bold;
-    border: 2px solid #6d3385;
-    padding: 10px 20px;
-    border-radius: 20px;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+ }
+ .b-button:hover {
+    background-color: #fae3ff;
+    transition: scale(1.03);
  }
  
 
